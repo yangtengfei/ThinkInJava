@@ -40,5 +40,4 @@ public class Practice01 implements Runnable{
 		Thread t3 = new Thread(practice01);
 		t3.start();
 	}
-	
 }
