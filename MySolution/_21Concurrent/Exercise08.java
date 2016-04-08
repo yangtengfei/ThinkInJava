@@ -1,5 +1,7 @@
 package _21Concurrent;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author: tengfei yang
  * @email: yangtengfei666666@163.com
@@ -28,11 +30,14 @@ public class Exercise08 extends Thread {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException   {
 		for (int i = 0; i < 5; i++) {
 			Thread t = new Thread(new Exercise08());
 			t.setDaemon(true);
 			t.start();
 		}
+		
+		// 本来下面这句忘了，导致程序一直运行没有终止
+		TimeUnit.MILLISECONDS.sleep(100);// Run for a while
 	}
 }
