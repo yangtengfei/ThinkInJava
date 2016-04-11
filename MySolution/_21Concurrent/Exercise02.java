@@ -8,11 +8,11 @@ import net.mindview.util.Generator;
  * @version: 2016年3月29日下午10:21:45 
  * @todo:TODO
  */
-public class Practice02 implements Runnable,Generator<Integer>{
+public class Exercise02 implements Runnable,Generator<Integer>{
 	int n, count=0;
 	
-	public Practice02() {}
-	public Practice02(int n) {
+	public Exercise02() {}
+	public Exercise02(int n) {
 		this.n = n;
 	}
 	
@@ -31,7 +31,7 @@ public class Practice02 implements Runnable,Generator<Integer>{
 	}
 	
 	public static void main(String[] args) {
-		Practice02 p1 = new Practice02(3);
+		Exercise02 p1 = new Exercise02(3);
 		Thread t1 = new Thread(p1);
 		Thread t2 = new Thread(p1);
 		Thread t3 = new Thread(p1);
