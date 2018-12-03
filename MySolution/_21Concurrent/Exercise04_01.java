@@ -17,24 +17,24 @@ public class Exercise04_01 implements Runnable,Generator<Integer>{
 	private int count = 0;
 	
 	public Exercise04_01(){}
-	public Exercise04_01(int n){//含有构造参数的构造器
+	public Exercise04_01(int n){// 含有构造参数的构造器
 		this.n = n;
 		System.out.println("Exercise04_01 " + n);
 	}
 	
-	//实现Generator接口
+	// 实现Generator接口
 	public Integer next() { return fib(count++); }
 	
 	@Override
 	public void run() {
-		Integer[] sequence = new Integer[n];//定义一个数组准备放入生成的数字
+		Integer[] sequence = new Integer[n];// 定义一个数组准备放入生成的数字
 		for(int i=0; i<n; i++){
-			sequence[i] = next();//给数组进行赋值
+			sequence[i] = next();// 给数组进行赋值
 		}
-		System.out.println("sequence " + n + " : " + Arrays.toString(sequence));//打印产生的位数和数组。	
+		System.out.println("sequence " + n + " : " + Arrays.toString(sequence));// 打印产生的位数和数组。	
 	}
 	
-	//利用递归进行调用，注意退出条件
+	// 利用递归进行调用，注意退出条件
 	private int fib(int n) {
 		if(n < 2) return 1;
 		return fib(n-2) + fib(n-1);
