@@ -25,7 +25,7 @@ public class Practice01 implements Runnable{
 	}
 	
 	/**
-	 * 多个线程并发执行
+	 *  多个线程并发执行
 	 * @param args
 	 */
 	public static void main(String[] args) {
